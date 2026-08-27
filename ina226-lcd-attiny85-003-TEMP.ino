@@ -10,7 +10,7 @@
 #define B_COEFFICIENT 3950.0 
 #define NOMINAL_RESISTANCE 10000.0 
 #define NOMINAL_TEMPERATURE 25.0   
-#define SERIES_RESISTOR 9084.0    
+#define SERIES_RESISTOR 9084.0   // valoarea masurata rezistorului de 10K 
 
 bool outputState = false;
 
@@ -77,15 +77,15 @@ void loop() {
     sumVoltage += rawVoltage * 0.00125;
 
     int16_t rawShunt = (int16_t)readRegister(0x01);
-    sumCurrentmA += (rawShunt * 0.0025) / 0.01;
+    sumCurrentmA += (rawShunt * 0.0025) / 0.01;  //0.01 valoarea rezistentei de sunt a lui ina226
 
     sumTemp += getTemperature();
 
     delay(10); 
   }
 
-  float avgVoltage = (sumVoltage / 20.0) * 0.95;
-  float avgCurrentA = ((sumCurrentmA / 20.0) / 100.0) * 0.625;
+  float avgVoltage = (sumVoltage / 20.0) * 0.95; //0,95 corectie
+  float avgCurrentA = ((sumCurrentmA / 20.0) / 100.0) * 0.625; //0.625 corectie
   float avgTemp = sumTemp / 20.0;
 
   if (avgVoltage < 0) avgVoltage = 0;
@@ -118,7 +118,7 @@ void loop() {
   lcd.print("I: ");
   if (avgCurrentA < 10.0) lcd.print("0");
   lcd.print(avgCurrentA, 2);
-  lcd.print(" A");
+  lcd.print("A");
 
   // Afișare stare PB1 în dreapta jos
   lcd.setCursor(13, 1);
