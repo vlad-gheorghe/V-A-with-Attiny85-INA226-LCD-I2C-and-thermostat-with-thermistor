@@ -10,4 +10,6 @@ My work is here https://vlad-gheorghe.blogspot.com/2026/08/voltmetru-0-35v-amper
 
 ![poza](https://github.com/vlad-gheorghe/V-A-with-Attiny85-INA226-LCD-I2C-and-thermostat-with-thermistor/blob/main/Screenshot%202026-08-27%20180142.png)
 
+![poza](https://github.com/vlad-gheorghe/V-A-with-Attiny85-INA226-LCD-I2C-and-thermostat-with-thermistor/blob/main/Screenshot%202026-08-29%20184123.png)
+
 ![poza](https://github.com/vlad-gheorghe/V-A-with-Attiny85-INA226-LCD-I2C-and-thermostat-with-thermistor/blob/main/IMG20260829183106.jpg)
